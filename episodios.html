@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POD ETEC - Episódios</title>
+    <link rel="shortcut icon" type="image/png" href="img/Logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+      
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/Logo.png" alt="Logo POD ETEC">
+            </a>
+        </div>
+       
+        <h1>POD ETEC</h1>
+       <!-- logo pra ficar no canto superior, quando clica nela vai pra pagina inicial -->
+        <nav>
+            <button id="toggle-theme">Tema</button>
+            <button id="episodio" onclick="linkarPagina()">Episódios</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-description">
+            <h2>Objetivo do Podcast</h2>
+            <p>
+                O <strong>POD ETEC</strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium cumque unde sed, officiis fugit ab quidem veritatis animi inventore, adipisci id modi sequi aliquam rerum sunt eos enim eius dolorem.
+            </p>
+            
+            <h3>Formato do Conteúdo</h3>
+            <p>Oferecemos nossos episódios em dois formatos para atender às suas preferências:</p>
+            <ul>
+                <li><strong>Vídeo (MP4):</strong> pro cego ver melhor</li>
+                <li><strong>Áudio (MP3):</strong> pro surdo escutar melhor</li>
+            </ul>
+        </section>
+
+        <section class="podcast-episodes">
+            <h2>Episódios</h2>
+
+            <article class="episode">
+                <h3>Episódio 1: POD ETEC</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com" 
+                            title="Episódio 1" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+                <audio controls>
+                    <source src="audios/Convert_ep1.mp3" type="audio/">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </article>
+        
+           
+            <article class="episode">
+                <h3>Episódio 2: sei la</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com" 
+                            title="Episódio 2" frameborder="0" allowfullscreen>
+                    </iframe>
+                </div>
+                <audio controls>
+                    <source src="audios/Convert_ep2.mp3" type="audio/">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </article>
+
+           
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore voluptatibus eos magnam nesciunt consequatur quo laboriosam ut tempore. Sed tenetur soluta at fugit rerum, accusantium dolor reiciendis eaque neque iure.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
