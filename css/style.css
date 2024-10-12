@@ -161,21 +161,88 @@ footer p {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .img-text {
+    .video-item {
+        flex: 1 1 100%;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    nav ul {
         flex-direction: column;
     }
 
     header {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+    }
+
+    .logo a img {
+        width: 80px;
+    }
+
+    .dropbtn {
+        width: 100%;
+        text-align: left;
+    }
+
+    .dropdown-content {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
     }
 
     header h1 {
-        margin: 10px 0;
+        font-size: 1.8em;
     }
 
-    nav {
-        flex-direction: column;
-        gap: 5px;
+    .dropbtn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .dropdown-content ul li a {
+        padding: 10px;
+    }
+
+    .video-item iframe {
+        height: 200px;
+    }
+
+    .busca-rapida input {
+        width: 80%;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    form button {
+        padding: 10px 20px;
+    }
+
+    .videos-destaque h3 {
+        font-size: 1.5em;
+    }
+
+    .project-description h2 {
+        font-size: 1.5em;
+    }
+
+    .project-description p {
+        font-size: 1em;
+    }
+
+    .titlesbook {
+        font-size: 1.2em;
+    }
+
+    .content p {
+        font-size: 0.9em;
     }
 }
