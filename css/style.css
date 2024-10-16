@@ -1,26 +1,26 @@
 
 :root {
-    --primary-color: #6A0DAD;        
-    --primary-color-hover: #4B0082;  
-    --secondary-color: #000000;     
+    --primary-color: #CF0000;        
+    --primary-color-hover: #CF0000;  
+    --secondary-color: #001430;     
     --text-button: #FFFFFF;          
-    --text-color: #000000;          
+    --text-color: #001430;          
     --background-color: #FFFFFF;     
     --card-background: #F8F9FA;      
-    --title-color: #6A0DAD;          
+    --title-color: #CF0000;          
 }
 
 [data-theme='dark'] {
-    --primary-color: #4B0082;       
-    --primary-color-hover: #6A0DAD;  
-    --secondary-color: #000000;      
+    --primary-color: #CF0000;       
+    --primary-color-hover: #CF0000;  
+    --secondary-color: #001430;      
     --text-color: #FFFFFF;           
-    --background-color: #000000;     
-    --card-background: #4B0082;      
+    --background-color: #001430;     
+    --card-background: #CF0000;      
     --title-color: #FFFFFF;          
 }
 
-
+/*
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
@@ -28,6 +28,18 @@ body {
     padding: 0;
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
+}
+    */
+ body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    
 }
 
 header {
@@ -57,7 +69,7 @@ nav {
 }
 
 nav button {
-    background-color: var(--secondary-color);
+    background-color: #000;
     color: var(--text-button);
     border: none;
     border-radius: 25px;
@@ -152,11 +164,13 @@ footer {
     background-color: var(--primary-color);
     color: var(--text-button);
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 15px;
+    
 }
 
 footer p {
     margin: 0;
+
 }
 
 /* Responsividade */
@@ -178,4 +192,62 @@ footer p {
     nav ul li {
         margin: 0; 
     }
+}
+
+/* design aba contato */
+
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+form input,
+form textarea {
+    width: 95%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    outline: none;
+    font-size: 1em;
+    background-color: #fff;
+    color: var(--text-color);
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--focus-color);
+}
+
+form button {
+    background-color:#ffc9c9;
+    color: #CF0000;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover,
+form button:focus {
+    background-color: var(--hover-color);
+    outline: none;
 }

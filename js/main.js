@@ -4,21 +4,21 @@ const toggleThemeButton = document.getElementById('toggle-theme');
 const bodyElement = document.body;
 
 const darkThemeStyles = {
-    '--background-color': '#000000', 
+    '--background-color': '#001430', 
     '--text-color': '#FFFFFF',       
-    '--card-background': '#4B0082',  
-    '--primary-color': '#4B0082',    
-    '--primary-color-hover': '#6A0DAD', 
+    '--card-background': '#CF0000',  
+    '--primary-color': '#CF0000',    
+    '--primary-color-hover': '#CF0000', 
     '--title-color': '#FFFFFF',      
 };
 
 const lightThemeStyles = {
     '--background-color': '#FFFFFF', 
-    '--text-color': '#000000',       
+    '--text-color': '#001430',       
     '--card-background': '#F8F9FA',  
-    '--primary-color': '#6A0DAD',    
-    '--primary-color-hover': '#4B0082', 
-    '--title-color': '#6A0DAD',      
+    '--primary-color': '#CF0000',    
+    '--primary-color-hover': '#CF0000', 
+    '--title-color': '#CF0000',      
 };
 
 
@@ -55,4 +55,11 @@ toggleThemeButton.addEventListener('click', () => {
 
 function linkarPagina() {
     window.location.href = "episodios.html";
+}
+
+function contatopagina() {
+    window.location.href = "contato.html";
+}
+function homePagina(){
+    window.location.href = "index.html";
 }
