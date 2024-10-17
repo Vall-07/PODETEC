@@ -217,6 +217,7 @@ form button:focus {
 }
 
 /* Estilos gerais do dropdown */
+/* Estilos gerais do dropdown */
 .dropdown {
     position: relative;
 }
@@ -333,7 +334,25 @@ form button:focus {
         right: 0;
         left: auto;
         top: 100%;
-        position: absolute;
         width: 100%;
     }
+}
+
+body {
+    overflow-x: hidden; /* Evitar estouro horizontal */
+}
+
+main.content {
+    padding: 20px;
+    max-width: 100%; /* Ajustar largura máxima */
+    margin: auto;
+    box-sizing: border-box; /* Incluir padding e border no tamanho total */
+}
+
+/* Garantir que imagens sejam responsivas */
+.img-text img {
+    max-width: 100%;
+    height: auto;
+    flex: 1 1 300px;
+    border-radius: 0;
 }
