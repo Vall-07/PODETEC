@@ -1,4 +1,3 @@
-
 :root {
     --primary-color: #CF0000;        
     --primary-color-hover: #CF0000;  
@@ -7,7 +6,9 @@
     --text-color: #001430;          
     --background-color: #FFFFFF;     
     --card-background: #F8F9FA;      
-    --title-color: #CF0000;          
+    --title-color: #CF0000;
+    --focus-color: #FF5656;          
+    --hover-color: #FFC9C9;          
 }
 
 [data-theme='dark'] {
@@ -17,27 +18,19 @@
     --text-color: #FFFFFF;           
     --background-color: #001430;     
     --card-background: #CF0000;      
-    --title-color: #FFFFFF;          
+    --title-color: #FFFFFF;
+    --focus-color: #FFFFFF;
+    --hover-color: #555555;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-color);
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
-}
-    */
- body {
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
-    margin: auto;
-    padding: auto;
+    margin: 0;                       
+    padding: 0;                    
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
-    
 }
 
 header {
@@ -67,27 +60,13 @@ nav {
     gap: 10px;
 }
 
-nav button {
-    background-color: #ffffff00;
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-
-nav button:hover {
-    background-color: var(--primary-color-hover);
-}
-
 main.content {
     padding: 20px;
     max-width: 1200px;
     margin: auto;
 }
-/* conteudo do meio da pagina com o grupinho de   */
+
+
 .img-text {
     display: flex;
     flex-wrap: wrap;
@@ -99,7 +78,7 @@ main.content {
     max-width: 100%;
     height: auto;
     flex: 1 1 300px;
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .img-text p {
@@ -164,13 +143,13 @@ footer {
     color: white; 
     text-align: center; 
     padding: 5px; 
-    position: static; 
+    position: relative;  
     bottom: 0;
     width: 100%; 
 }
 
 footer p {
-    margin: 1; 
+    margin: 0;   
 }
 
 footer a {
@@ -184,61 +163,7 @@ footer img {
     filter: invert(1); 
 }
 
-
-/* Responsividade */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    /* Ajuste no layout do nav */
-    nav {
-        display: flex;
-        justify-content: space-between; /* Distribui o espaço igualmente */
-        align-items: center;
-        gap: 10px;
-        padding: 0 10px;
-        box-sizing: border-box;
-        width: 100%;
-    }
-
-    /* Ajustar a lista de navegação para que os itens se alinhem em uma única linha */
-    nav ul {
-        display: flex;
-        justify-content: space-between; /* Distribui os itens igualmente */
-        padding: 0;
-        list-style: none;
-        width: 100%; /* Garante que os itens ocupem toda a largura */
-    }
-
-    nav ul li {
-        margin: 0;
-        flex: 1; /* Faz com que cada item ocupe o mesmo espaço */
-        text-align: center; /* Centraliza os itens */
-    }
-
-    /* Ajustar os botões para que se ajustem ao espaço disponível */
-    nav button {
-        width: 100%;
-        max-width: 150px; /* Define um limite máximo */
-        padding: 10px 15px;
-        font-size: 0.9em;
-        border-radius: 25px;
-        box-sizing: border-box;
-    }
-
-    /* Certifique-se de que o cabeçalho não estoure a tela */
-    header {
-        padding: 15px;
-        text-align: center;
-    }
-}
-
-
-
-
-
+/* contato */
 form {
     max-width: 600px;
     margin: 40px auto;
@@ -248,9 +173,6 @@ form {
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
-
-
 
 form label {
     display: block;
@@ -268,17 +190,17 @@ form textarea {
     border-radius: 5px;
     outline: none;
     font-size: 1em;
-    background-color: #ff7070;
+    background-color: #ff5656;
     color: var(--text-color);
 }
 
 form input:focus,
 form textarea:focus {
-    border-color: var(--focus-color);
+    border-color: var(--focus-color);  
 }
 
 form button {
-    background-color:#ffc9c9;
+    background-color: #ffc9c9;
     color: #CF0000;
     font-size: 1em;
     font-weight: 600;
@@ -291,6 +213,132 @@ form button {
 
 form button:hover,
 form button:focus {
-    background-color: var(--hover-color);
+    background-color: var(--hover-color); 
     outline: none;
+}
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropbtn {
+    background-color: #FF5656; 
+    color: #FFFFFF; 
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #CF0000; 
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
+}
+
+
+.dropbtn:hover {
+    background-color: #FFC9C9; 
+    color: #CF0000; 
+    border-color: #FF5656; 
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    right: 0;
+}
+
+
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content ul li {
+    padding: 10px;
+}
+
+
+.dropdown-content ul li a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content ul li a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.theme-toggle-btn {
+    background-color: #FF5656;
+    color: #FFFFFF;
+    border: 1px solid #CF0000;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+.theme-toggle-btn:hover {
+    background-color: #FFC9C9;
+    color: #CF0000;
+    border-color: #FF5656;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column; 
+        text-align: center; 
+    }
+
+    nav ul {
+        margin-top: 1rem; 
+        display: flex; 
+        justify-content: center; 
+        padding: 0; 
+        list-style: none; 
+        gap: 1rem; 
+    }
+
+    nav ul li {
+        margin: 0; 
+    }
+
+    .img-text img {
+        flex: 1 1 100%;  
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .dropdown-content ul li {
+        text-align: center;
+    }
+
+    .dropbtn {
+        width: 100%;
+    }
 }
