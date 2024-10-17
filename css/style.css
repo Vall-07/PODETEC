@@ -34,14 +34,14 @@ body {
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--text-button);
-    padding: 20px;
-    text-align: center;
-    position: relative;
+    width: 100%; /* Garantir que o header ocupe 100% da largura */
+    background-color: var(--primary-color); /* Cor de fundo do header */
+    padding: 10px 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Incluir padding e border no tamanho total */
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Logo à esquerda, botão à direita */
+    align-items: center; /* Centralizar verticalmente */
+    position: relative;
 }
 
 .logo img {
