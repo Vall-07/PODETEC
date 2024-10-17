@@ -1,23 +1,23 @@
 :root {
-    --primary-color: #CF0000;        
-    --primary-color-hover: #CF0000;  
-    --secondary-color: #001430;     
-    --text-button: #FFFFFF;          
-    --text-color: #001430;          
-    --background-color: #FFFFFF;     
-    --card-background: #F8F9FA;      
+    --primary-color: #CF0000;
+    --primary-color-hover: #CF0000;
+    --secondary-color: #001430;
+    --text-button: #FFFFFF;
+    --text-color: #001430;
+    --background-color: #FFFFFF;
+    --card-background: #F8F9FA;
     --title-color: #CF0000;
-    --focus-color: #FF5656;          
-    --hover-color: #FFC9C9;          
+    --focus-color: #FF5656;
+    --hover-color: #FFC9C9;
 }
 
 [data-theme='dark'] {
-    --primary-color: #CF0000;       
-    --primary-color-hover: #CF0000;  
-    --secondary-color: #001430;      
-    --text-color: #FFFFFF;           
-    --background-color: #001430;     
-    --card-background: #CF0000;      
+    --primary-color: #CF0000;
+    --primary-color-hover: #CF0000;
+    --secondary-color: #001430;
+    --text-color: #FFFFFF;
+    --background-color: #001430;
+    --card-background: #CF0000;
     --title-color: #FFFFFF;
     --focus-color: #FFFFFF;
     --hover-color: #555555;
@@ -27,8 +27,8 @@ body {
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
-    margin: 0;                       
-    padding: 0;                    
+    margin: 0;
+    padding: 0;
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
 }
@@ -47,7 +47,7 @@ header {
 .logo img {
     width: 80px;
     height: auto;
-    filter: invert(1); 
+    filter: invert(1);
 }
 
 header h1 {
@@ -65,7 +65,6 @@ main.content {
     max-width: 1200px;
     margin: auto;
 }
-
 
 .img-text {
     display: flex;
@@ -139,28 +138,28 @@ audio {
 }
 
 footer {
-    background-color: var(--primary-color); 
-    color: white; 
-    text-align: center; 
-    padding: 5px; 
-    position: relative;  
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: relative;
     bottom: 0;
-    width: 100%; 
+    width: 100%;
 }
 
 footer p {
-    margin: 0;   
+    margin: 0;
 }
 
 footer a {
     margin: 0 10px;
-    display: inline-block; 
+    display: inline-block;
 }
 
 footer img {
-    width: 24px; 
-    height: 24px; 
-    filter: invert(1); 
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
 }
 
 /* contato */
@@ -196,7 +195,7 @@ form textarea {
 
 form input:focus,
 form textarea:focus {
-    border-color: var(--focus-color);  
+    border-color: var(--focus-color);
 }
 
 form button {
@@ -213,14 +212,11 @@ form button {
 
 form button:hover,
 form button:focus {
-    background-color: var(--hover-color); 
+    background-color: var(--hover-color);
     outline: none;
 }
 
-
-
 /* Estilos gerais do dropdown */
-
 .dropdown {
     position: relative;
 }
@@ -237,7 +233,6 @@ form button:focus {
     font-family: inherit;
 }
 
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -249,7 +244,6 @@ form button:focus {
     overflow: hidden;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 
 .dropdown-content ul {
     list-style-type: none;
@@ -280,7 +274,6 @@ form button:focus {
     outline: none;
 }
 
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -289,14 +282,12 @@ form button:focus {
     background-color: var(--hover-color);
 }
 
-
 @media (max-width: 768px) {
-    
     header {
         display: flex;
-        justify-content: space-between; 
-        align-items: center;  
-        flex-direction: row;  
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
     }
 
     .logo a img {
@@ -304,13 +295,12 @@ form button:focus {
     }
 
     .dropbtn {
-        width: auto; 
+        width: auto;
         text-align: center;
     }
 
-    
     .dropdown-content {
-        min-width: 100%; 
+        min-width: 100%;
         position: absolute;
         top: 100%;
         right: 0;
@@ -318,11 +308,10 @@ form button:focus {
 }
 
 @media (max-width: 480px) {
-    
     header {
         padding: 10px;
         display: flex;
-        justify-content: space-between; 
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -335,18 +324,16 @@ form button:focus {
         font-size: 14px;
     }
 
-    
     .dropdown {
         position: relative;
-        margin-left: auto; 
+        margin-left: auto;
     }
 
-    
     .dropdown-content {
         right: 0;
         left: auto;
         top: 100%;
         position: absolute;
-        width: 100%; 
+        width: 100%;
     }
 }
