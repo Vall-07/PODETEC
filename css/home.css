@@ -1,0 +1,225 @@
+:root {
+    --primary-color: #CF0000;
+    --primary-color-hover: #CF0000;
+    --secondary-color: #001430;
+    --text-button: #FFFFFF;
+    --text-color: #001430;
+    --background-color: #FFFFFF;
+    --card-background: #F8F9FA;
+    --title-color: #CF0000;
+}
+
+[data-theme='dark'] {
+    --primary-color: #CF0000;
+    --primary-color-hover: #CF0000;
+    --secondary-color: #001430;
+    --text-color: #FFFFFF;
+    --background-color: #001430;
+    --card-background: #CF0000;
+    --title-color: #FFFFFF;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    background-image: url('../img/0101.png'); /* Aplica a imagem como fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto a página rola */
+    background-repeat: no-repeat; /* Evita que a imagem seja repetida */
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-button);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    filter: invert(1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav button {
+    background-color: #ffffff00;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+main.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Conteúdo do meio da página com o grupinho */
+/* Estilo para a seção de imagem */
+.img-text {
+    position: relative;
+    height: 100vh; /* A imagem ocupará toda a altura da tela (100% da altura da viewport) */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não vaze */
+}
+
+.img-text img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha a área sem distorcer */
+    z-index: -1; /* Faz a imagem ficar atrás do conteúdo */
+}
+
+/* Estilo para o conteúdo abaixo da imagem */
+.content-below {
+    background-color: var(--background-color); /* Fundo padrão abaixo da imagem */
+    color: var(--text-color); /* Cor do texto padrão */
+    padding: 20px;
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+
+.project-description, .podcast-episodes {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project-description h2, .podcast-episodes h2 {
+    color: var(--title-color);
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.project-description p, .project-description ul {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+
+footer {
+    background-color: var(--primary-color); 
+    color: white; 
+    text-align: center; 
+    padding: 10px; 
+    position: static; 
+    bottom: 0;
+    width: 100%; 
+}
+
+footer p {
+    margin: 1; 
+}
+
+footer a {
+    margin: 0 15px;
+    display: inline-block; 
+}
+
+footer img {
+    width: 24px; 
+    height: 24px; 
+    filter: invert(1); 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+}
+
+.episodes-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.episode {
+    width: 22%;
+    text-align: center;
+    background-color: #CF0000;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.episode:hover {
+    transform: scale(1.05);
+}
+
+.polaroid {
+   
+    padding: 10px;
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.episode h3 {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+audio {
+    margin-top: 10px;
+    width: 100%;
+}
