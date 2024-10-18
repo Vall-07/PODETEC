@@ -1,66 +1,54 @@
-<!-- a pagina inicial seria aquela ideia de apresentar o podcast e falar de como ele funciona -->
 <!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POD ETEC</title>
-     <!--icon de pagina no navegador do pc-->
-     <!-- tava pensado nisso perfeito genio quem teve essa ideia-->
     <link rel="shortcut icon" type="image/png" href="img/Logo.png">
-  
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-     <!-- logo pra ficar no canto superior, quando clica nela vai pra pagina inicial -->
         <div class="logo">
             <a href="index.html">
                 <img src="img/Logo.png" alt="Logo POD ETEC">
             </a>
-            <!--um espaco muito aberto sem nada aqui, podemos adiconar algo para preencher aqui-->
         </div>
-    
-        
-        <div class="dropdown">
-            <button class="dropbtn">☰</button>
-            <div class="dropdown-content">
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="episodios.html">Epísodios</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><button id="theme-toggle" class="theme-toggle-btn">☀️🌙</button></li>
-                </ul>
-            </div>
-        </div>
-        
+        <nav>
+            <button id="home" onclick="homePagina()">Início</button>
+            <button id="episodio" onclick="linkarPagina()">Episódios</button>
+            <button id="contato" onclick="contatopagina()">Contato</button>
+            <button id="toggle-theme">Tema</button>
+        </nav>
     </header>
-    
 
-    <main class="content">
+    <main>
         <section class="img-text">
             <img src="img/0101.png" class="img-grupo" alt="Grupo POD ETEC">
-            <link rel="shortcut icon" type="image/png" href="img/lologo.png">
-            <p>
-                 <strong>Quem somos</strong>
-                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quam nemo harum? Ipsum repellat corrupti dolor quidem qui atque delectus, voluptatibus magnam, et est quas accusantium deleniti porro? Ea, assumenda!</p>
-            </p>
-            <p>
-                <strong>Episódios mais recentes</strong>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quam nemo harum? Ipsum repellat corrupti dolor quidem qui atque delectus, voluptatibus magnam, et est quas accusantium deleniti porro? Ea, assumenda!</p>
-            </p>
+           
         </section>
-      
+    
+        <section class="content-below">
+            <h2>Quem somos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quam nemo harum? Ipsum repellat corrupti dolor quidem qui atque delectus, voluptatibus magnam, et est quas accusantium deleniti porro? Ea, assumenda!</p>
+            <h2>Episódios mais recentes</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quam nemo harum? Ipsum repellat corrupti dolor quidem qui atque delectus, voluptatibus magnam, et est quas accusantium deleniti porro? Ea, assumenda!</p>
+        </section>
     </main>
-
-    <script src="js/main.js"></script>
+    
     <footer>
         <p>&copy; 2024 POD ETEC.</p>
-            <a href="https://www.youtube.com/"><img src="img/LYOU.png"></a>
-            <a href="https://www.instagram.com/"><img src="img/LINST.png"></a>
-            <a href="https://open.spotify.com/intl-pt"><img src="img/LSPOT.png"></a>
-        </div>
+        <a href="https://www.youtube.com/">
+            <img src="img/LYOU.png" alt="YouTube">
+        </a>
+        <a href="https://www.instagram.com/">
+            <img src="img/LINST.png" alt="Instagram">
+        </a>
+        <a href="https://open.spotify.com/intl-pt">
+            <img src="img/LSPOT.png" alt="Spotify">
+        </a>
     </footer>
+    
+    <script src="js/main.js"></script>
 </body>
-
 </html>

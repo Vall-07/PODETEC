@@ -7,8 +7,6 @@
     --background-color: #FFFFFF;
     --card-background: #F8F9FA;
     --title-color: #CF0000;
-    --focus-color: #FF5656;
-    --hover-color: #FFC9C9;
 }
 
 [data-theme='dark'] {
@@ -19,29 +17,31 @@
     --background-color: #001430;
     --card-background: #CF0000;
     --title-color: #FFFFFF;
-    --focus-color: #FFFFFF;
-    --hover-color: #555555;
 }
 
 body {
-    flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
+    background-image: url('../img/0101.png'); /* Aplica a imagem como fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto a página rola */
+    background-repeat: no-repeat; /* Evita que a imagem seja repetida */
 }
 
 header {
-    width: 100%; /* Garantir que o header ocupe 100% da largura */
-    background-color: var(--primary-color); /* Cor de fundo do header */
-    padding: 10px 20px; /* Espaçamento interno */
-    box-sizing: border-box; /* Incluir padding e border no tamanho total */
-    display: flex;
-    justify-content: space-between; /* Logo à esquerda, botão à direita */
-    align-items: center; /* Centralizar verticalmente */
+    background-color: var(--primary-color);
+    color: var(--text-button);
+    padding: 20px;
+    text-align: center;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo img {
@@ -60,31 +60,59 @@ nav {
     gap: 10px;
 }
 
+nav button {
+    background-color: #ffffff00;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: var(--primary-color-hover);
+}
+
 main.content {
     padding: 20px;
     max-width: 1200px;
     margin: auto;
 }
 
+/* Conteúdo do meio da página com o grupinho */
+/* Estilo para a seção de imagem */
 .img-text {
+    position: relative;
+    height: 100vh; /* A imagem ocupará toda a altura da tela (100% da altura da viewport) */
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
+    overflow: hidden; /* Garante que a imagem não vaze */
 }
 
 .img-text img {
-    max-width: 100%;
-    height: auto;
-    flex: 1 1 300px;
-    border-radius: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha a área sem distorcer */
+    z-index: -1; /* Faz a imagem ficar atrás do conteúdo */
 }
 
-.img-text p {
-    flex: 1 1 100%;
+/* Estilo para o conteúdo abaixo da imagem */
+.content-below {
+    background-color: var(--background-color); /* Fundo padrão abaixo da imagem */
+    color: var(--text-color); /* Cor do texto padrão */
+    padding: 20px;
+    text-align: justify;
     font-size: 1.1em;
     line-height: 1.6;
 }
+
 
 .project-description, .podcast-episodes {
     padding: 20px;
@@ -142,13 +170,13 @@ footer {
     color: white;
     text-align: center;
     padding: 5px;
-    position: relative;
+    position: static;
     bottom: 0;
     width: 100%;
 }
 
 footer p {
-    margin: 0;
+    margin: 1;
 }
 
 footer a {
@@ -162,7 +190,28 @@ footer img {
     filter: invert(1);
 }
 
-/* contato */
+/* Responsividade */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+}
+
+/* Design aba contato */
 form {
     max-width: 600px;
     margin: 40px auto;
@@ -189,7 +238,7 @@ form textarea {
     border-radius: 5px;
     outline: none;
     font-size: 1em;
-    background-color: #ff5656;
+    background-color: #ff7070;
     color: var(--text-color);
 }
 
@@ -199,7 +248,7 @@ form textarea:focus {
 }
 
 form button {
-    background-color: #ffc9c9;
+    background-color:#ffc9c9;
     color: #CF0000;
     font-size: 1em;
     font-weight: 600;
@@ -214,145 +263,4 @@ form button:hover,
 form button:focus {
     background-color: var(--hover-color);
     outline: none;
-}
-
-/* Estilos gerais do dropdown */
-/* Estilos gerais do dropdown */
-.dropdown {
-    position: relative;
-}
-
-.dropbtn {
-    background-color: #fff;
-    color: var(--secondary-color);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    font-family: inherit;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #fff;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown-content ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown-content ul li a,
-.theme-toggle-btn {
-    color: var(--primary-color);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease;
-    border: none;
-    background: none;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-    font-family: inherit;
-}
-
-.dropdown-content ul li a:hover,
-.dropdown-content ul li a:focus,
-.theme-toggle-btn:hover,
-.theme-toggle-btn:focus {
-    background-color: var(--text-color);
-    outline: none;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: var(--hover-color);
-}
-
-@media (max-width: 768px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-    }
-
-    .logo a img {
-        width: 80px;
-    }
-
-    .dropbtn {
-        width: auto;
-        text-align: center;
-    }
-
-    .dropdown-content {
-        min-width: 100%;
-        position: absolute;
-        top: 100%;
-        right: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header h1 {
-        font-size: 1.8em;
-    }
-
-    .dropbtn {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .dropdown {
-        position: relative;
-        margin-left: auto;
-    }
-
-    .dropdown-content {
-        right: 0;
-        left: auto;
-        top: 100%;
-        width: 100%;
-    }
-}
-
-body {
-    overflow-x: hidden; /* Evitar estouro horizontal */
-}
-
-main.content {
-    padding: 20px;
-    max-width: 100%; /* Ajustar largura máxima */
-    margin: auto;
-    box-sizing: border-box; /* Incluir padding e border no tamanho total */
-}
-
-/* Garantir que imagens sejam responsivas */
-.img-text img {
-    max-width: 100%;
-    height: auto;
-    flex: 1 1 300px;
-    border-radius: 0;
 }

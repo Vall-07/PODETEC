@@ -9,41 +9,31 @@
 </head>
 <body>
     <header>
-      
         <div class="logo">
             <a href="index.html">
                 <img src="img/Logo.png" alt="Logo POD ETEC">
             </a>
         </div>
-       
-       
-       <!-- logo pra ficar no canto superior, quando clica nela vai pra pagina inicial -->
-       <div class="dropdown">
-        <button class="dropbtn">☰</button>
-        <div class="dropdown-content">
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="episodios.html">Epísodios</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><button id="theme-toggle" class="theme-toggle-btn">☀️🌙</button></li>
-            </ul>
-        </div>
-    </div>
+        <nav>
+            <button id="home" onclick="homePagina()">Início</button>
+            <button id="episodio" onclick="linkarPagina()">Episódios</button>
+            <button id="contato" onclick="contatopagina()">Contato</button>
+            <button id="toggle-theme">Tema</button>
+        </nav>
     </header>
 
     <main>
         <section class="project-description">
             <h2>Objetivo do Podcast</h2>
             <p>
-                O <strong>POD ETEC</strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium cumque unde sed, officiis fugit ab quidem veritatis animi inventore, adipisci id modi sequi aliquam rerum sunt eos enim eius dolorem.
+                O <strong>POD ETEC</strong> tem como objetivo compartilhar conhecimento e experiências relevantes. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium cumque unde sed, officiis fugit ab quidem veritatis animi inventore, adipisci id modi sequi aliquam rerum sunt eos enim eius dolorem.
             </p>
             
             <h3>Formato do Conteúdo</h3>
             <p>Oferecemos nossos episódios em dois formatos para atender às suas preferências:</p>
             <ul>
-                <!--se o twitter ver isso daqui......chora-->
-                <li><strong>Vídeo (MP4):</strong> pro cego ver melhor</li>
-                <li><strong>Áudio (MP3):</strong> pro surdo escutar melhor</li>
+                <li><strong>Vídeo (MP4):</strong> para uma experiência visual completa.</li>
+                <li><strong>Áudio (MP3):</strong> para ouvir onde e quando quiser.</li>
             </ul>
         </section>
 
@@ -53,40 +43,42 @@
             <article class="episode">
                 <h3>Episódio 1: POD ETEC</h3>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com" 
+                    <iframe src="https://www.youtube.com/embed/example1" 
                             title="Episódio 1" frameborder="0" allowfullscreen>
                     </iframe>
                 </div>
                 <audio controls>
-                    <source src="audios/Convert_ep1.mp3" type="audio/">
-                    Seu navegador não suphorta o elemento de áudio.
+                    <source src="audios/Convert_ep1.mp3" type="audio/mpeg">
+                    Seu navegador não suporta o elemento de áudio.
                 </audio>
             </article>
         
-           
             <article class="episode">
-                <h3>Episódio 2: sei la</h3>
+                <h3>Episódio 2: Sei lá</h3>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com" 
+                    <iframe src="https://www.youtube.com/embed/example2" 
                             title="Episódio 2" frameborder="0" allowfullscreen>
                     </iframe>
                 </div>
                 <audio controls>
-                    <source src="audios/Convert_ep2.mp3" type="audio/">
+                    <source src="audios/Convert_ep2.mp3" type="audio/mpeg">
                     Seu navegador não suporta o elemento de áudio.
                 </audio>
             </article>
-
-           
         </section>
     </main>
 
     <footer>
         <p>Todos os direitos reservados &copy; 2024 POD ETEC.</p>
-            <a href="#"><img src="img/LYOU.png" alt="Youtube"></a>
-            <a href="#"><img src="img/LINST.png" alt="Instagram"></a>
-            <a href="#"><img src="img/LSPOT.png" alt="Spotfy"></a>
-        </div>
+        <a href="https://www.youtube.com/">
+            <img src="img/LYOU.png" alt="Youtube">
+        </a>
+        <a href="https://www.instagram.com/">
+            <img src="img/LINST.png" alt="Instagram">
+        </a>
+        <a href="https://open.spotify.com/">
+            <img src="img/LSPOT.png" alt="Spotify">
+        </a>
     </footer>
 
     <script src="js/main.js"></script>
