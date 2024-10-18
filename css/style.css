@@ -1,4 +1,3 @@
-
 :root {
     --primary-color: #CF0000;        
     --primary-color-hover: #CF0000;  
@@ -20,16 +19,19 @@
     --title-color: #FFFFFF;          
 }
 
+* {
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
 
- body {
+body {
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
-    margin: auto;
-    padding: auto;
+    margin: 0; /* Corrigido para evitar espaço indesejado */
+    padding: 0; /* Corrigido para evitar espaço indesejado */
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
-    
+    overflow-x: hidden; /* Impede a rolagem lateral */
 }
 
 header {
@@ -41,6 +43,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Permite que os itens do header se ajustem em várias linhas se necessário */
 }
 
 .logo img {
@@ -57,10 +60,11 @@ header h1 {
 nav {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap; /* Permite que os botões do nav se ajustem em várias linhas */
 }
 
 nav button {
-    background-color: #ffffff00;
+    background-color: transparent; /* Removido o valor hexadecimal para manter a transparência */
     color: #fff;
     border: none;
     border-radius: 25px;
@@ -76,14 +80,13 @@ nav button:hover {
 
 main.content {
     padding: 20px;
-    max-width: 1200px;
+    max-width: 100%; /* Garante que não ultrapasse a largura da tela */
     margin: auto;
 }
 
-
 .project-description, .podcast-episodes {
     padding: 20px;
-    max-width: 1200px;
+    max-width: 100%; /* Garante que não ultrapasse a largura da tela */
     margin: auto;
 }
 
@@ -157,31 +160,26 @@ footer img {
     filter: invert(1); 
 }
 
-
 /* Responsividade */
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: column; 
+    header {
+        flex-direction: column; /* Alinha os itens do cabeçalho em coluna */
         text-align: center; 
     }
     
-    nav ul {
-        margin-top: 1rem; 
-        display: flex; 
-        justify-content: center; 
-        padding: 0; 
-        list-style: none; 
-        gap: 1rem; 
+    nav {
+        flex-direction: column; /* Alinha os botões em coluna */
+        align-items: center; /* Centraliza os botões horizontalmente */
+        gap: 10px; /* Espaço entre os botões */
     }
 
-    nav ul li {
-        margin: 0; 
+    nav button {
+        width: 100%; /* Faz os botões ocuparem a largura total */
+        max-width: 200px; /* Limita a largura dos botões para um tamanho razoável */
     }
 }
 
-
-/* design aba contato */
-
+/* Design da aba contato */
 form {
     max-width: 600px;
     margin: 40px auto;
@@ -191,9 +189,6 @@ form {
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
-
-
 
 form label {
     display: block;
@@ -221,7 +216,7 @@ form textarea:focus {
 }
 
 form button {
-    background-color:#ffc9c9;
+    background-color: #ffc9c9;
     color: #CF0000;
     font-size: 1em;
     font-weight: 600;
@@ -237,4 +232,3 @@ form button:focus {
     background-color: var(--hover-color);
     outline: none;
 }
-
