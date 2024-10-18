@@ -240,3 +240,9 @@ audio {
     margin-top: 10px;
     width: 100%;
 }
+
+@media (max-width: 768px) { /* Ajuste o valor conforme necessário */
+    .img-text {
+        display: none; /* Oculta a seção em telas menores */
+    }
+}
