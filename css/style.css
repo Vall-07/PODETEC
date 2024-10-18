@@ -20,18 +20,18 @@
 }
 
 * {
-    box-sizing: border-box; /* Inclui padding e border na largura total */
+    box-sizing: border-box; 
 }
 
 body {
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
-    margin: 0; /* Corrigido para evitar espaço indesejado */
-    padding: 0; /* Corrigido para evitar espaço indesejado */
+    margin: 0; 
+    padding: 0; 
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
-    overflow-x: hidden; /* Impede a rolagem lateral */
+    overflow-x: hidden; 
 }
 
 header {
@@ -43,7 +43,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Permite que os itens do header se ajustem em várias linhas se necessário */
+    flex-wrap: wrap; 
 }
 
 .logo img {
@@ -60,11 +60,11 @@ header h1 {
 nav {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap; /* Permite que os botões do nav se ajustem em várias linhas */
+    flex-wrap: wrap; 
 }
 
 nav button {
-    background-color: transparent; /* Removido o valor hexadecimal para manter a transparência */
+    background-color: transparent; 
     color: #fff;
     border: none;
     border-radius: 25px;
@@ -80,13 +80,13 @@ nav button:hover {
 
 main.content {
     padding: 20px;
-    max-width: 100%; /* Garante que não ultrapasse a largura da tela */
+    max-width: 100%; 
     margin: auto;
 }
 
 .project-description, .podcast-episodes {
     padding: 20px;
-    max-width: 100%; /* Garante que não ultrapasse a largura da tela */
+    max-width: 100%; 
     margin: auto;
 }
 
@@ -163,23 +163,23 @@ footer img {
 /* Responsividade */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Alinha os itens do cabeçalho em coluna */
+        flex-direction: column; 
         text-align: center; 
     }
     
     nav {
-        flex-direction: column; /* Alinha os botões em coluna */
-        align-items: center; /* Centraliza os botões horizontalmente */
-        gap: 10px; /* Espaço entre os botões */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px; 
     }
 
     nav button {
-        width: 100%; /* Faz os botões ocuparem a largura total */
-        max-width: 200px; /* Limita a largura dos botões para um tamanho razoável */
+        width: 100%; 
+        max-width: 200px; 
     }
 }
 
-/* Design da aba contato */
+/* contato */
 form {
     max-width: 600px;
     margin: 40px auto;

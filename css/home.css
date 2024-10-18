@@ -20,7 +20,7 @@
 }
 
 * {
-    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos nas dimensões totais */
+    box-sizing: border-box; 
 }
 
 body {
@@ -30,7 +30,7 @@ body {
     padding: 0; 
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
-    overflow-x: hidden; /* Evita rolagem lateral */
+    overflow-x: hidden; 
     background-image: url('../img/0101.png');
     background-size: cover;
     background-position: center;
@@ -80,7 +80,7 @@ nav button:hover {
     background-color: var(--primary-color-hover);
 }
 
-/* Garantir que o botão "Tema" não saia da tela no celular */
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -90,7 +90,7 @@ nav button:hover {
 
 main.content {
     padding: 20px;
-    max-width: 100%; /* Ajustado para garantir que não exceda a largura da tela */
+    max-width: 100%; 
     margin: auto;
 }
 
@@ -125,7 +125,7 @@ main.content {
 
 .project-description, .podcast-episodes {
     padding: 20px;
-    max-width: 100%; /* Ajustado para garantir que não exceda a largura da tela */
+    max-width: 100%; 
     margin: auto;
 }
 
@@ -165,7 +165,7 @@ footer img {
     filter: invert(1); 
 }
 
-/* Responsividade do header e nav */
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -182,23 +182,23 @@ footer img {
     }
 }
 
-/* Responsividade dos polaroids */
+
 .episodes-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px; /* Ajuste o espaço entre os polaroids */
+    gap: 20px; 
 }
 
 .episode {
-    width: 22%; /* Você pode ajustar essa largura conforme necessário */
+    width: 22%; 
     text-align: center;
     background-color: #CF0000;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
-    margin: 0; /* Certifique-se de que a margem esteja zerada para evitar assimetrias */
+    margin: 0; 
 }
 
 .episode:hover {
@@ -211,7 +211,7 @@ footer img {
     margin-bottom: 10px;
 }
 
-/* Polaroids ajustáveis para diferentes tamanhos de tela */
+
 @media (max-width: 1200px) {
     .episode {
         width: 45%;
@@ -241,8 +241,8 @@ audio {
     width: 100%;
 }
 
-@media (max-width: 768px) { /* Ajuste o valor conforme necessário */
+@media (max-width: 768px) { 
     .img-text {
-        display: none; /* Oculta a seção em telas menores */
+        display: none; 
     }
 }
