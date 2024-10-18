@@ -20,15 +20,7 @@
     --title-color: #FFFFFF;          
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-color);
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
-}
-    */
+
  body {
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -187,6 +179,7 @@ footer img {
     }
 }
 
+
 /* design aba contato */
 
 form {
@@ -244,3 +237,4 @@ form button:focus {
     background-color: var(--hover-color);
     outline: none;
 }
+
